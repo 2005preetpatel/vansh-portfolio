@@ -71,7 +71,7 @@ const Enquire = ({ onBack }) => {
             <footer className="mt-auto py-20 opacity-20 text-[7px] tracking-[0.3em] uppercase">
                 Shoot us an email: hello@vanshgupta.com
             </footer>
-        </motion.div >
+        </motion.div>
     );
 };
 
