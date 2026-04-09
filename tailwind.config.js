@@ -13,7 +13,8 @@ export default {
         "charcoal": "#0d0d0d",
       },
       fontFamily: {
-        "display": ["Newsreader", "serif"]
+        "display": ["Newsreader", "serif"],
+        "script": ["Cinzel Decorative", "serif"]
       },
       borderRadius: {
         "DEFAULT": "0px",

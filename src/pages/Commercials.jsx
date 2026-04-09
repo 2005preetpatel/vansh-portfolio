@@ -27,7 +27,7 @@ const Commercials = ({ onBack }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="bg-black text-white min-h-screen pt-32 px-10 relative overflow-hidden"
+            className="bg-[#141414] text-white min-h-screen pt-32 px-10 relative overflow-hidden"
         >
             <motion.div
                 className={`custom-cursor ${isHovering ? 'active' : ''}`}

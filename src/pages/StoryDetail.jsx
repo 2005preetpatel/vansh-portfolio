@@ -29,8 +29,7 @@ const StoryDetail = ({ story, onBack }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className="min-h-screen relative overflow-hidden"
-            style={{ backgroundColor: '#f5f1eb', color: '#1a1a1a' }}
+            className="bg-[#141414] text-white min-h-screen relative overflow-hidden"
         >
             {/* Custom cursor */}
             <motion.div
@@ -40,24 +39,17 @@ const StoryDetail = ({ story, onBack }) => {
                 style={{ backgroundColor: '#1a1a1a' }}
             />
 
-            {/* Nav */}
-            <nav
-                className="fixed top-0 w-full z-50 flex justify-between items-center px-10 py-8"
-                style={{ backgroundColor: 'rgba(245,241,235,0.92)', backdropFilter: 'blur(14px)', borderBottom: '1px solid rgba(0,0,0,0.06)' }}
-            >
+            <nav className="fixed top-0 w-full z-50 px-10 py-10 flex justify-between items-center bg-black/40 backdrop-blur-md border-b border-white/5">
                 <button
                     onClick={onBack}
-                    className="flex items-center gap-3 group"
+                    className="flex items-center gap-4 group"
                     onMouseEnter={() => setIsHovering(true)}
                     onMouseLeave={() => setIsHovering(false)}
                 >
-                    <div
-                        className="w-9 h-9 flex items-center justify-center transition-all duration-300 group-hover:bg-neutral-900 group-hover:text-white"
-                        style={{ border: '1px solid rgba(0,0,0,0.15)' }}
-                    >
-                        <ArrowLeft size={14} />
+                    <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
+                        <ArrowLeft size={16} />
                     </div>
-                    <span style={{ fontSize: '9px', letterSpacing: '0.4em' }} className="uppercase font-medium opacity-60">Stories</span>
+                    <span className="text-[10px] tracking-[0.4em] uppercase font-medium">Stories</span>
                 </button>
 
                 <span className="font-display font-light" style={{ fontSize: '13px', letterSpacing: '0.5em' }}>
@@ -86,7 +78,7 @@ const StoryDetail = ({ story, onBack }) => {
                     {/* Gradient overlay bottom */}
                     <div
                         className="absolute inset-0"
-                        style={{ background: 'linear-gradient(to bottom, rgba(245,241,235,0) 50%, rgba(245,241,235,1) 100%)' }}
+                        style={{ background: 'linear-gradient(to bottom, rgba(20,20,20,0) 50%, rgba(20,20,20,1) 100%)' }}
                     />
 
                     {/* Couple name overlaid on hero */}
@@ -105,7 +97,7 @@ const StoryDetail = ({ story, onBack }) => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                             className="font-display italic leading-none"
-                            style={{ fontSize: 'clamp(3rem, 8vw, 7rem)', color: '#1a1a1a' }}
+                            style={{ fontSize: 'clamp(3rem, 8vw, 7rem)', color: '#ffffff' }}
                         >
                             {coupleParts[0]}
                             {coupleParts[1] && (
@@ -128,7 +120,7 @@ const StoryDetail = ({ story, onBack }) => {
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ delay: 0.8, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-                    style={{ height: '1px', backgroundColor: 'rgba(0,0,0,0.1)', transformOrigin: 'left' }}
+                    style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.1)', transformOrigin: 'left' }}
                 />
 
                 {/* Info row */}
@@ -139,11 +131,11 @@ const StoryDetail = ({ story, onBack }) => {
                     </div>
                     <div>
                         <p style={{ fontSize: '8px', letterSpacing: '0.5em', color: '#aaa' }} className="uppercase mb-2">Location</p>
-                        <p style={{ fontSize: '13px', letterSpacing: '0.2em', color: '#1a1a1a' }} className="uppercase font-medium">{location}</p>
+                        <p style={{ fontSize: '13px', letterSpacing: '0.2em', color: '#ffffff' }} className="uppercase font-medium">{location}</p>
                     </div>
                     <div>
                         <p style={{ fontSize: '8px', letterSpacing: '0.5em', color: '#aaa' }} className="uppercase mb-2">Photography</p>
-                        <p style={{ fontSize: '13px', letterSpacing: '0.2em', color: '#1a1a1a' }} className="uppercase font-medium">Vansh Gupta</p>
+                        <p style={{ fontSize: '13px', letterSpacing: '0.2em', color: '#ffffff' }} className="uppercase font-medium">Vansh Gupta</p>
                     </div>
                 </div>
 
@@ -154,7 +146,7 @@ const StoryDetail = ({ story, onBack }) => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1 }}
-                        style={{ fontSize: '15px', lineHeight: 2, color: 'rgba(0,0,0,0.5)', maxWidth: '620px' }}
+                        style={{ fontSize: '15px', lineHeight: 2, color: 'rgba(255,255,255,0.6)', maxWidth: '620px' }}
                         className="mb-24 font-light"
                     >
                         {description}
@@ -180,14 +172,14 @@ const StoryDetail = ({ story, onBack }) => {
                             onMouseLeave={() => setIsHovering(false)}
                         >
                             <div
-                                className="w-16 h-16 flex items-center justify-center transition-all duration-500 group-hover:bg-neutral-900"
-                                style={{ border: '1px solid rgba(0,0,0,0.2)' }}
+                                className="w-16 h-16 flex items-center justify-center transition-all duration-500 group-hover:bg-white"
+                                style={{ border: '1px solid rgba(255,255,255,0.2)' }}
                             >
-                                <Play size={18} className="ml-1 transition-colors duration-500 group-hover:text-white" />
+                                <Play size={18} className="ml-1 transition-colors duration-500 group-hover:text-black" />
                             </div>
                             <div>
                                 <p style={{ fontSize: '8px', letterSpacing: '0.5em', color: '#aaa' }} className="uppercase mb-1">Watch the film</p>
-                                <p style={{ fontSize: '11px', letterSpacing: '0.3em', color: '#1a1a1a' }} className="uppercase font-medium">{couple} Wedding Film</p>
+                                <p style={{ fontSize: '11px', letterSpacing: '0.3em', color: '#ffffff' }} className="uppercase font-medium">{couple} Wedding Film</p>
                             </div>
                         </a>
                     </motion.div>
@@ -212,7 +204,7 @@ const StoryDetail = ({ story, onBack }) => {
                 </motion.div>
 
                 {/* Photo credit */}
-                <p style={{ fontSize: '8px', letterSpacing: '0.4em', color: 'rgba(0,0,0,0.3)' }} className="uppercase text-right mb-32">
+                <p style={{ fontSize: '8px', letterSpacing: '0.4em', color: 'rgba(255,255,255,0.3)' }} className="uppercase text-right mb-32">
                     © Vansh Gupta / {couple}
                 </p>
 
@@ -223,10 +215,10 @@ const StoryDetail = ({ story, onBack }) => {
                     viewport={{ once: true }}
                     transition={{ duration: 1.5 }}
                     className="text-center py-24"
-                    style={{ borderTop: '1px solid rgba(0,0,0,0.07)', borderBottom: '1px solid rgba(0,0,0,0.07)' }}
+                    style={{ borderTop: '1px solid rgba(255,255,255,0.07)', borderBottom: '1px solid rgba(255,255,255,0.07)' }}
                 >
                     <Heart size={14} style={{ color: '#b5865a', margin: '0 auto 24px' }} />
-                    <p style={{ fontSize: '10px', letterSpacing: '0.45em', lineHeight: 2.4, color: '#888' }} className="uppercase max-w-2xl mx-auto">
+                    <p style={{ fontSize: '10px', letterSpacing: '0.45em', lineHeight: 2.4, color: '#aaa' }} className="uppercase max-w-2xl mx-auto">
                         Like a river flows surely to the sea,&nbsp;
                         <span style={{ color: '#b5865a' }}>so it goes</span>&nbsp;
                         some things are&nbsp;
@@ -236,19 +228,19 @@ const StoryDetail = ({ story, onBack }) => {
             </main>
 
             {/* ── FOOTER ── */}
-            <footer className="py-16 px-10 flex flex-col items-center gap-8" style={{ borderTop: '1px solid rgba(0,0,0,0.07)' }}>
-                <div className="flex gap-10" style={{ color: 'rgba(0,0,0,0.25)' }}>
-                    <a href="https://instagram.com/vansh.gupta08" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-neutral-900">
+            <footer className="py-16 px-10 flex flex-col items-center gap-8" style={{ borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+                <div className="flex gap-10" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                    <a href="https://instagram.com/vansh.gupta08" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-white">
                         <Instagram size={16} />
                     </a>
-                    <a href="https://wa.me/918982911149" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-neutral-900">
+                    <a href="https://wa.me/918982911149" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-white">
                         <MessageCircle size={16} />
                     </a>
-                    <a href="mailto:vanshguptasg08@gmail.com" className="transition-colors hover:text-neutral-900">
+                    <a href="mailto:vanshguptasg08@gmail.com" className="transition-colors hover:text-white">
                         <Mail size={16} />
                     </a>
                 </div>
-                <p style={{ fontSize: '7px', letterSpacing: '0.4em', color: 'rgba(0,0,0,0.3)' }} className="uppercase">
+                <p style={{ fontSize: '7px', letterSpacing: '0.4em', color: 'rgba(255,255,255,0.3)' }} className="uppercase">
                     © Vansh Gupta
                 </p>
             </footer>

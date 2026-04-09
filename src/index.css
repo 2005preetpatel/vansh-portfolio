@@ -6,12 +6,16 @@
   --color-background-dark: #0a0a0a;
   --color-charcoal: #0d0d0d;
 
-  --font-display: "Newsreader", serif;
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
 
   --radius-default: 0px;
   --radius-lg: 0px;
   --radius-xl: 0px;
   --radius-full: 0px;
+
+  /* Global Black override for elegant cinematic look */
+  --color-black: #0a0b10;
 }
 
 @keyframes scroll-left {
@@ -33,33 +37,17 @@
 }
 
 body {
-  font-family: 'Newsreader', serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: #000;
+  background-color: #0a0b10;
   min-height: max(884px, 100dvh);
-  cursor: none;
-  /* Hide default cursor for custom one */
 }
 
-/* Custom Cursor */
+/* Custom Cursor (Disabled) */
 .custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 8px;
-  height: 8px;
-  background: white;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-difference: exclusion;
-  transition: transform 0.15s ease-out, opacity 0.3s ease;
-}
-
-.custom-cursor.active {
-  transform: scale(3);
+  display: none !important;
 }
 
 /* Film Grain */
@@ -150,4 +138,28 @@ body {
   inset: 0;
   background: radial-gradient(circle, transparent 30%, rgba(0, 0, 0, 0.6) 100%);
   pointer-events: none;
+}
+
+/* ========================================================================= */
+/* THEME TOGGLE (LIGHT MODE INVERSION HACK)                                  */
+/* ========================================================================= */
+
+html.light-mode {
+  filter: invert(1) hue-rotate(180deg);
+  background-color: #ededed;
+}
+
+/* Revert the invert for images, videos, and specific backgrounds */
+html.light-mode img,
+html.light-mode video,
+html.light-mode iframe,
+html.light-mode canvas,
+html.light-mode [style*="background-image"] {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Prevent double inversion if elements are nested */
+html.light-mode [style*="background-image"] img,
+html.light-mode [style*="background-image"] video {
+  filter: none;
 }

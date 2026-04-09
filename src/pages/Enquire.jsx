@@ -17,7 +17,7 @@ const Enquire = ({ onBack }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="bg-black text-white min-h-screen pt-32 px-10 relative overflow-hidden flex flex-col items-center"
+            className="bg-[#141414] text-white min-h-screen pt-32 px-10 relative overflow-hidden flex flex-col items-center"
         >
             <motion.div
                 className={`custom-cursor ${isHovering ? 'active' : ''}`}
@@ -42,7 +42,7 @@ const Enquire = ({ onBack }) => {
                     Let's create <br /> fiction together.
                 </motion.h2>
 
-                <form className="space-y-12 text-left">
+                <form className="space-y-12 text-left" onSubmit={(e) => e.preventDefault()}>
                     <div className="space-y-4">
                         <label className="text-[8px] tracking-[0.5em] uppercase text-white/30">Your Name</label>
                         <input type="text" className="w-full bg-transparent border-b border-white/10 py-4 focus:border-white transition-colors outline-none font-light tracking-widest" />

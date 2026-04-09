@@ -34,8 +34,7 @@ const Stories = ({ onBack }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="min-h-screen relative overflow-hidden"
-            style={{ backgroundColor: '#f5f1eb', color: '#1a1a1a' }}
+            className="bg-[#141414] text-white min-h-screen relative overflow-hidden"
         >
             {/* Custom cursor */}
             <motion.div
@@ -46,23 +45,17 @@ const Stories = ({ onBack }) => {
             />
 
             {/* Nav */}
-            <nav
-                className="fixed top-0 w-full z-50 flex justify-between items-center px-10 py-8"
-                style={{ backgroundColor: 'rgba(245,241,235,0.9)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(0,0,0,0.06)' }}
-            >
+            <nav className="fixed top-0 w-full z-50 px-10 py-10 flex justify-between items-center bg-black/40 backdrop-blur-md border-b border-white/5">
                 <button
                     onClick={onBack}
-                    className="flex items-center gap-3 group"
+                    className="flex items-center gap-4 group"
                     onMouseEnter={() => setIsHovering(true)}
                     onMouseLeave={() => setIsHovering(false)}
                 >
-                    <div
-                        className="w-9 h-9 flex items-center justify-center transition-all duration-300 group-hover:bg-neutral-900 group-hover:text-white"
-                        style={{ border: '1px solid rgba(0,0,0,0.15)' }}
-                    >
-                        <ArrowLeft size={14} />
+                    <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
+                        <ArrowLeft size={16} />
                     </div>
-                    <span style={{ fontSize: '9px', letterSpacing: '0.4em' }} className="uppercase font-medium opacity-60">Back</span>
+                    <span className="text-[10px] tracking-[0.4em] uppercase font-medium">Back</span>
                 </button>
 
                 <span className="font-display font-light" style={{ fontSize: '13px', letterSpacing: '0.5em' }}>
@@ -95,7 +88,7 @@ const Stories = ({ onBack }) => {
                         fontSize: 'clamp(3.5rem, 10vw, 9rem)',
                         lineHeight: 0.9,
                         letterSpacing: '-0.01em',
-                        color: '#1a1a1a',
+                        color: '#ffffff',
                         marginBottom: '3rem',
                     }}
                 >
@@ -120,7 +113,7 @@ const Stories = ({ onBack }) => {
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ delay: 1, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-                    style={{ height: '1px', backgroundColor: 'rgba(0,0,0,0.1)', maxWidth: '80px' }}
+                    style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.1)', maxWidth: '80px' }}
                 />
             </header>
 
@@ -218,20 +211,20 @@ const Stories = ({ onBack }) => {
             {/* ── FOOTER ── */}
             <footer
                 className="py-16 px-10 flex flex-col items-center gap-8"
-                style={{ borderTop: '1px solid rgba(0,0,0,0.07)' }}
+                style={{ borderTop: '1px solid rgba(255,255,255,0.07)' }}
             >
-                <div className="flex gap-10" style={{ color: 'rgba(0,0,0,0.25)' }}>
-                    <a href="https://instagram.com/vansh.gupta08" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-neutral-900">
+                <div className="flex gap-10" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                    <a href="https://instagram.com/vansh.gupta08" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-white">
                         <Instagram size={16} />
                     </a>
-                    <a href="https://wa.me/918982911149" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-neutral-900">
+                    <a href="https://wa.me/918982911149" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-white">
                         <MessageCircle size={16} />
                     </a>
-                    <a href="mailto:vanshguptasg08@gmail.com" className="transition-colors hover:text-neutral-900">
+                    <a href="mailto:vanshguptasg08@gmail.com" className="transition-colors hover:text-white">
                         <Mail size={16} />
                     </a>
                 </div>
-                <p style={{ fontSize: '7px', letterSpacing: '0.4em', color: 'rgba(0,0,0,0.3)' }} className="uppercase">
+                <p style={{ fontSize: '7px', letterSpacing: '0.4em', color: 'rgba(255,255,255,0.3)' }} className="uppercase">
                     © Vansh Gupta
                 </p>
             </footer>

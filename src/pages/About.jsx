@@ -29,7 +29,7 @@ const About = ({ onBack }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="bg-black text-white min-h-screen pt-32 px-10 relative overflow-hidden"
+            className="bg-[#141414] text-white min-h-screen pt-32 px-10 relative overflow-hidden"
         >
             <motion.div
                 className={`custom-cursor ${isHovering ? 'active' : ''}`}
@@ -59,11 +59,11 @@ const About = ({ onBack }) => {
                     </p>
                     <div className="flex gap-12">
                         <div className="text-center">
-                            <span className="block text-4xl font-display">{aboutData?.Films_Count || "120+"}</span>
-                            <span className="text-[8px] tracking-[0.3em] uppercase text-white/20">Films</span>
+                            <span className="block text-4xl font-display">{aboutData?.Films_Count || "80+"}</span>
+                            <span className="text-[8px] tracking-[0.3em] uppercase text-white/20">Shoots</span>
                         </div>
                         <div className="text-center">
-                            <span className="block text-4xl font-display">{aboutData?.Years_Exp || "8+"}</span>
+                            <span className="block text-4xl font-display">{aboutData?.Years_Exp || "3+"}</span>
                             <span className="text-[8px] tracking-[0.3em] uppercase text-white/20">Years</span>
                         </div>
                     </div>
@@ -87,7 +87,7 @@ const About = ({ onBack }) => {
                         <Instagram size={18} />
                     </a>
                     <a
-                        href="https://wa.me/919329668425"
+                        href="https://wa.me/918982911149"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-white transition-colors"
